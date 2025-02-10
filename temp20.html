@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Number:<input type="number" id="num"  name="num" onchange="onclick()"/></p>
+    <button onclick="showData()">submit</button>
+     <div id="data"></div>
+    <script>
+      // let a=Number;
+      function showData() {
+      let str="";
+      let a = Number(document.getElementById("num").value);
+      
+        for (let i = 1; i <= 10; i++) {
+          
+           str += `${a} x ${i}= ${a*i}<br>`;
+        }
+        data.innerHTML = str;
+      }
+    </script>
+  </body>
+</html>
