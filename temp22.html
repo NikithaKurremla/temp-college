@@ -6,15 +6,25 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- ForEach -->
-    <script>
-    //   const products = ["apple", "orange", "mango"];
-    //   products.forEach((value,index,arr) => {
-    //     console.log(value,index+1,arr);
-    //   });
-    const num=[12,23,45,67];
-        
+      <script>
+        // <!-- ForEach(1(element),2(index),3(array))-->
+      const products = ["apple", "orange", "mango"];
+      products.forEach((value,index,arr) => {
+        console.log(value,index+1,arr);
+      });
+    // Map:
+    // const num1=[2,3,4,6];
+    // const newArr1=num1.map(value1 =>{
+    //     return value1 + 5
+    // })
+    // console.log(newArr1);
 
+    // const num=[2,3,4,6];
+    // const newArr=num.map(value => value + 5)
+    // console.log(newArr);
+    const num=[2,3,4,15];
+    const newArr=num.filter(value => value > 10)
+    console.log(newArr);
       // for(let i=0;i<products.length;i++){
       //     console.log(products[i]);
       // }
