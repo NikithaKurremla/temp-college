@@ -22,13 +22,25 @@
         console.log(cart);
         showCart();
       };
+      const incre = (id) => {
+        cart[id] = cart[id] + 1;
+        showCart();
+      };
+      const desc = (id) => {
+        cart[id] = cart[id] - 1;
+        showCart();
+      };
 
       const showCart = () => {
         let str = "";
         products.map((value) => {
           if (cart[value.id]) {
             str += `
-            <li>${value.name}-$${value.price}-<button>-</button>${cart[value.id]}<button>+</button>-${value.price*cart[value.id]}</li>
+            <li>${value.name}-$${value.price}-<button onclick="desc(${
+              value.id
+            })">-</button>${cart[value.id]}<button onclick="incre(${
+              value.id
+            })">+</button>-${value.price * cart[value.id]}</li>
             `;
           }
         });
