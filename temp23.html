@@ -30,7 +30,21 @@
         cart[id] = cart[id] - 1;
         showCart();
       };
+      // let total=0;
+      const showTotal = () =>{
+        let str="";
+        let total=products.reduce((sum,value)=>{
+        // if(cart[value.id]){
+        return sum+value.price * cart[value.id];
+        // }
 
+        },0);
+          // str+=`
+
+          // `
+          divTotal.innerHTML= total;
+        };
+    
       const showCart = () => {
         let str = "";
         products.map((value) => {
@@ -45,6 +59,7 @@
           }
         });
         divCart.innerHTML = str;
+        showTotal();
       };
       const showProducts = () => {
         let str = "";
@@ -64,5 +79,6 @@
     <div id="divProducts"></div>
     <h3>My Cart</h3>
     <div id="divCart"></div>
+    <div id="divTotal"></div>
   </body>
 </html>
