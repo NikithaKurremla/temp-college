@@ -31,14 +31,17 @@
         showCart();
       };
       // let total=0;
+      // let sum=0;
       const showTotal = () =>{
         let str="";
         let total=products.reduce((sum,value)=>{
         // if(cart[value.id]){
-        return sum+value.price * cart[value.id];
+        //  return sum=sum+value.price * cart[value.id];
         // }
-
-        },0);
+        // return sum;
+        return sum=sum+value.price * (cart[value.id] ? cart[value.id]:0);
+        
+      },0);
           // str+=`
 
           // `
