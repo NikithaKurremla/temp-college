@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chkHoliday(){
+
+            let doj =document.getElementById('doj').value;
+            if(doj.getDay()==3){
+                msg.innerHtml ="sorry. We are Closed on Wendesday";
+            }else{
+                msg.innerHtml="Welcome";
+            }
+        }
+        // let doj =new Date()
+        // document.write(doj)
+        // document.write(doj.getDate())
+        // document.write(doj.getFullYear())
+        // document.write(doj.getDay())
+    </script>
+</head>
+<body>
+    <input type="date" id="doj">
+    <button onclick="chkHoliday">Click </button>
+
+</body>
+</html>
